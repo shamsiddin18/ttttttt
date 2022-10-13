@@ -3,7 +3,7 @@ const { Test } = require('../models')
 
 exports.addItem = (req, res) => {
     Test.addItem(req.body).then(r => {
-        res.send({ success: true, msg: r })
+          res.send({ success: true, msg: r })
     }).catch(e => {
         res.send({ success: false, msg: e })
     })
@@ -11,8 +11,11 @@ exports.addItem = (req, res) => {
 
 exports.getItems = (req, res) => {
     Test.getItems().then(r => {
-        res.send({ success: true, msg: r })
+        res.send({ 'ggg':'ggg',success: true, msg: r })
     }).catch(e => {
         res.send({ success: false, msg: e })
     })
+
+    
+
 }

@@ -7,7 +7,8 @@ const db = mongoose.connect(mongoURL).then(r => {
 });
 
 db.Test = require('./test')(mongoose)
+db.Show = require('./collection')(mongoose)
+db.Info = require('./collectioninfo')(mongoose)
 
 console.log(db);
-
 module.exports = db
