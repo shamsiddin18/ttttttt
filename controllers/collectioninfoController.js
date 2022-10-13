@@ -3,7 +3,7 @@ const { Info } = require('../models')
 
 exports.addItem = (req, res) => {
     Info.addItem(req.body).then(r => {
-        res.send({ 'ResultList': r.map(item => {return {atmid: item.atmid, 'results': 'OK'}}) })
+        res.send({ 'ResultList': r.map(item => {return {atmid: item.atmid, 'results': 'OK'}})})
     }).catch(e => {
 
         res.send({ success: false, msg: e })
